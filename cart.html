@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaceOff - Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">FaceOff</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">
+        <span>🛒</span>
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-total">
+      <h3>Total: $<span id="cart-total">0.00</span></h3>
+      <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <!-- Payment Modal -->
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Payment Details</h2>
+      <form id="payment-form">
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="text" id="expiry-date" placeholder="MM/YY" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="123" required>
+        <button type="submit" class="btn">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+      <h2>Payment Successful!</h2>
+      <p>Thank you for your purchase. Your order has been placed successfully.</p>
+      <button class="btn" id="close-confirmation">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="social-media">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+      </div>
+      <p>© 2025 FaceOff. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./scripts/cart.js"></script>
+  <script src="./scripts/script.js"></script>
+
+</body>
+</html>

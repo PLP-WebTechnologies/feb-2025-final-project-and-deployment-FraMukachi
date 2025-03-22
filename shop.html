@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceOff - Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">FaceOff</h1>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+              </ul>
+            </nav>
+            <div class="cart-icon">
+                <span></span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop">
+        <h2>Shop All</h2>
+        <div class="filters">
+          <label for="category">Filter by Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="hoodies">Hoodies</option>
+            <option value="tees">Tees</option>
+            <option value="accessories">Accessories</option>
+          </select>
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="product-grid">
+          <div class="product-card" data-category="hoodies">
+            <img src="img/10.jpg" alt="Nike Sneakers">
+            <h3>Nike Sneakers</h3>
+            <p>$200.00</p>
+            <button class="btn" onclick="addToCart('Nike', 200.00, 'img/10.jpg')">Add to Cart</button>
+          </div>
+          <div class="product-card" data-category="tees">
+            <img src="img/9.jpg" alt="Graphic Tee">
+            <h3>Graphic Tee</h3>
+            <p>R100.00</p>
+            <button class="btn" onclick="addToCart('Graphic Tee', 100.00, 'img/9.jpg')">Add to Cart</button>
+          </div>
+          <div class="product-card" data-category="accessories">
+            <img src="img/6.jpg" alt="Street Cap">
+            <h3>Street Cap</h3>
+            <p>$80.99</p>
+            <button class="btn" onclick="addToCart('Street Cap', 80.00, 'img/6.jpg')">Add to Cart</button>
+          </div>
+          <div class="product-card" data-category="jacket">
+            <img src="img/8.jpg" alt="Jacket">
+            <h3>Jacket</h3>
+            <p>$150.</p>
+            <button class="btn" onclick="addToCart('Oversized Hoodie', 150.00, 'img/8.jpg')">Add to Cart</button>
+          </div>
+          <div class="product-card" data-category="tees">
+            <img src="img/11.jpg" alt="Vintage Tee">
+            <h3>Vintage Tee</h3>
+            <p>$100.00</p>
+            <button class="btn" onclick="addToCart('Vintage Tee', 100.00, 'img/11.jpg')">Add to Cart</button>
+          </div>
+          <div class="product-card" data-category="accessories">
+            <img src="img/7.jpg" alt="Beanie">
+            <h3>Beanie</h3>
+            <p>50.00</p>
+            <button class="btn" onclick="addToCart('Beanie', 50.00, 'img/7.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    
+      <footer>
+        <div class="container">
+          <div class="social-media">
+            <a href="https://www.instagram.com">Instagram</a>
+            <a href="https://www.twitter.com">Twitter</a>
+            <a href="https://www.facebook.com">Facebook</a>
+          </div>
+          <p>© 2025 FaceOff. All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/shop.js"></script>    
+</body>
+</html>
